@@ -10,6 +10,7 @@ image = "0.25.8"
 imageproc = "0.25.0"
 opencv = { version = "0.96.0", features = ["clang-runtime"] }
 rusty-tesseract = "1.1.10"
+unicode-width = "0.2.2"
 
 [dependencies.rust-paddle-ocr]
 git = "https://github.com/zibo-chen/rust-paddle-ocr.git"
