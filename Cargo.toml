@@ -1,0 +1,15 @@
+[package]
+name = "line-detect-and-parse"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+ab_glyph = "0.2.32"
+error_set = "0.9.0"
+image = "0.25.8"
+imageproc = "0.25.0"
+opencv = { version = "0.96.0", features = ["clang-runtime"] }
+rusty-tesseract = "1.1.10"
+
+[dependencies.rust-paddle-ocr]
+git = "https://github.com/zibo-chen/rust-paddle-ocr.git"
