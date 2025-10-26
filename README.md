@@ -1,5 +1,7 @@
 ![Original Image](./test.png)
 
+Video created by running `ffmpeg -y -framerate 7 -pattern_type glob -i '*.png' -c:v libx264 -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -pix_fmt yuv420p output.mp4` in `.tmp-files/outputs-[1,2,3]`
+
 
 https://github.com/user-attachments/assets/f0a7a20c-26a8-4444-b13b-c949c3f653c9
 
