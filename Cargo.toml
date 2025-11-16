@@ -1,19 +1,42 @@
 [package]
 name = "line-detect-and-parse"
 version = "0.1.0"
-edition = "2024"
+edition = "2021"
+
+[features]
+default = []
+processing = [
+    "dep:ab_glyph",
+    "dep:argh",
+    "dep:error_set",
+    "dep:image",
+    "dep:imageproc",
+    "dep:indicatif",
+    "dep:opencv",
+    "dep:rusty-tesseract",
+    "dep:rust-paddle-ocr",
+]
 
 [dependencies]
-ab_glyph = "0.2.32"
-error_set = "0.9.0"
-image = "0.25.8"
-imageproc = "0.25.0"
-indicatif = "0.18.0"
-opencv = { version = "0.96.0", features = ["clang-runtime"] }
-rusty-tesseract = "1.1.10"
+serde = { version = "1.0.228", features = ["derive"] }
 strum = "0.27.2"
 strum_macros = "0.27.2"
 unicode-width = "0.2.2"
 
-[dependencies.rust-paddle-ocr]
-git = "https://github.com/zibo-chen/rust-paddle-ocr.git"
+ab_glyph = { version = "0.2.32", optional = true }
+argh = { version = "0.1.13", optional = true }
+error_set = { version = "0.9.0", optional = true }
+image = { version = "0.25.8", optional = true }
+imageproc = { version = "0.25.0", optional = true }
+indicatif = { version = "0.18.0", optional = true }
+opencv = { version = "0.96.0", features = ["clang-runtime"], optional = true }
+rusty-tesseract = { version = "1.1.10", optional = true }
+rust-paddle-ocr = { git = "https://github.com/zibo-chen/rust-paddle-ocr.git", optional = true }
+
+[[bin]]
+name = "major_binary"
+path = "src/main.rs"
+
+[lib]
+name = "major_lib"
+path = "src/lib/mod.rs"

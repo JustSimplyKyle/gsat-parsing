@@ -135,6 +135,38 @@ dependencies = [
 ]
 
 [[package]]
+name = "argh"
+version = "0.1.13"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "34ff18325c8a36b82f992e533ece1ec9f9a9db446bd1c14d4f936bac88fcd240"
+dependencies = [
+ "argh_derive",
+ "argh_shared",
+ "rust-fuzzy-search",
+]
+
+[[package]]
+name = "argh_derive"
+version = "0.1.13"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "adb7b2b83a50d329d5d8ccc620f5c7064028828538bdf5646acd60dc1f767803"
+dependencies = [
+ "argh_shared",
+ "proc-macro2",
+ "quote",
+ "syn 2.0.106",
+]
+
+[[package]]
+name = "argh_shared"
+version = "0.1.13"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a464143cc82dedcdc3928737445362466b7674b5db4e2eb8e869846d6d84f4f6"
+dependencies = [
+ "serde",
+]
+
+[[package]]
 name = "arrayvec"
 version = "0.7.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -977,6 +1009,7 @@ name = "line-detect-and-parse"
 version = "0.1.0"
 dependencies = [
  "ab_glyph",
+ "argh",
  "error_set",
  "image",
  "imageproc",
@@ -984,6 +1017,7 @@ dependencies = [
  "opencv",
  "rust-paddle-ocr",
  "rusty-tesseract",
+ "serde",
  "strum",
  "strum_macros",
  "unicode-width 0.2.2",
@@ -1596,6 +1630,12 @@ name = "rgb"
 version = "0.8.52"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0c6a884d2998352bb4daf0183589aec883f16a6da1f4dde84d8e2e9a5409a1ce"
+
+[[package]]
+name = "rust-fuzzy-search"
+version = "0.1.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a157657054ffe556d8858504af8a672a054a6e0bd9e8ee531059100c0fa11bb2"
 
 [[package]]
 name = "rust-paddle-ocr"
